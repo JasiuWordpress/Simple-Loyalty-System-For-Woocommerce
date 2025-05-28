@@ -87,6 +87,51 @@ function SimpleLoyalty_Rewards_Register_Settings(){
         //sprawdzanie czy field Jest pusty jak tak to go nie rejestrujemy.
        'sanitize_callback' => 'SimpleLoyalty_CheckIfEmpty'
     ]);
+
+    register_setting('SimpleLoyalty_Rewards_Group','SimpleLoyalty_discount_type', [
+        //sprawdzanie czy field Jest pusty jak tak to go nie rejestrujemy.
+       'sanitize_callback' => 'SimpleLoyalty_CheckIfEmpty'
+    ]);
+
+      register_setting('SimpleLoyalty_Rewards_Group','SimpleLoyalty_discount_value', [
+        //sprawdzanie czy field Jest pusty jak tak to go nie rejestrujemy.
+       'sanitize_callback' => 'SimpleLoyalty_CheckIfEmpty'
+    ]);
+    
+     register_setting('SimpleLoyalty_Rewards_Group','SimpleLoyalty_discount_minimal_order_value', [
+        //sprawdzanie czy field Jest pusty jak tak to go nie rejestrujemy.
+       'sanitize_callback' => 'SimpleLoyalty_CheckIfEmpty'
+    ]);
+
+     register_setting('SimpleLoyalty_Rewards_Group','SimpleLoyalty_discount_max_order_value', [
+        //sprawdzanie czy field Jest pusty jak tak to go nie rejestrujemy.
+       'sanitize_callback' => 'SimpleLoyalty_CheckIfEmpty'
+    ]);
+
+
+     register_setting('SimpleLoyalty_Rewards_Group','SimpleLoyalty_discount_shipping', [
+        //sprawdzanie czy field Jest pusty jak tak to go nie rejestrujemy.
+       'sanitize_callback' => 'SimpleLoyalty_CheckIfEmpty'
+    ]);
+
+        register_setting('SimpleLoyalty_Rewards_Group', 'SimpleLoyalty_discount_image', [
+            'type' => 'array',
+            'sanitize_callback' => function($input) {
+                $clean = [];
+                foreach ($input as $key => $url) {
+                    if (!empty($url) && filter_var($url, FILTER_VALIDATE_URL)) {
+                        $clean[sanitize_text_field($key)] = esc_url_raw($url);
+                    }
+                }
+                return $clean;
+            },
+            'default' => [],
+        ]);
+
+      register_setting('SimpleLoyalty_Rewards_Group','SimpleLoyalty_discount_description', [
+        //sprawdzanie czy field Jest pusty jak tak to go nie rejestrujemy.
+       'sanitize_callback' => 'SimpleLoyalty_CheckIfEmpty'
+    ]);
 }
 
 

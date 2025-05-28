@@ -69,7 +69,7 @@
     padding-right:20px;
 }
 .SimpleLoyalty_accordeon_body[aria-hidden="false"]{
-    max-height: 600px;
+    max-height: 1000px;
     overflow: hidden;
     background: #fdfcfe;
     transition: max-height 0.4s ease-in-out, padding 0.2s ease;
@@ -120,6 +120,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-top: 20px;
+    margin-bottom:50px;
     padding: 15px;
     background: #f9f9fb;
     border: 1px solid #ddd;
