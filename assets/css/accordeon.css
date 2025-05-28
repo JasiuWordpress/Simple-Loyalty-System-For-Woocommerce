@@ -1,0 +1,174 @@
+/* === Ogólne resetowanie listy === */
+.SimpleLoyalty_reward_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* === Nagłówek listy (Name, Type, Value, Toggle) === */
+.SimpleLoyalty_list_header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 40px;
+    background: #f7f7f7;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+/* === Pojedyncza linia z nagrodą === */
+.SimpleLoyalty_wrap {
+    border-bottom: 1px solid #eee;
+}
+
+/* === Główka akordeonu (klikana) === */
+.SimpleLoyalty_accordeon_head {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 40px;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    background: #fafafa;
+}
+
+.SimpleLoyalty_accordeon_head:hover {
+    background: #f0e6ff;
+}
+
+/* === Toggle (ikona, X) === */
+.SimpleLoyalty_accordeon_toggle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.SimpleLoyalty_accordeon_toggle:hover {
+    color: #7e57c2; /* fiolet */
+}
+
+/* === Zawartość rozwijana === */
+.SimpleLoyalty_accordeon_body[aria-hidden="true"]{
+    max-height: 0px;
+    overflow: hidden;
+    background: #fdfcfe;
+    transition: max-height 0.4s ease-in-out, padding 0.2s ease;
+    font-size: 14px;
+    color: #333;
+    transition:0.4s ease-in-out;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:20px;
+    padding-right:20px;
+}
+.SimpleLoyalty_accordeon_body[aria-hidden="false"]{
+    max-height: 600px;
+    overflow: hidden;
+    background: #fdfcfe;
+    transition: max-height 0.4s ease-in-out, padding 0.2s ease;
+    font-size: 14px;
+    color: #333;
+    transition:0.4s ease-in-out;
+     padding-top:40px;
+    padding-bottom:40px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.SimpleLoyalty_accordeon_body.open {
+    padding: 15px;
+}
+
+/* === Pola formularza === */
+.SimpleLoyalty_accordeon_body input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: #fff;
+    box-sizing: border-box;
+
+}
+
+/* === Akcent fioletowy === */
+.SimpleLoyalty_accordeon_body input:focus {
+    border-color: #a278d6;
+    box-shadow: 0 0 0 1px #a278d6;
+    outline: none;
+}
+
+
+.SimpleLoyalty_reward_list {
+    max-width:1400px;
+    box-sizing: border-box;
+    margin-right:20px;
+}
+
+
+.SimpleLoyalty_Reward_Settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9fb;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* Pojedyncze pole */
+.SimpleLoyalty_Reward_Settings_Part {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etykiety */
+.SimpleLoyalty_Reward_Settings_Part label {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Inputy i selecty */
+.SimpleLoyalty_Reward_Settings_Part input[type="text"],
+.SimpleLoyalty_Reward_Settings_Part select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Checkbox tylko lekko wyrównany */
+.SimpleLoyalty_Reward_Settings_Part input[type="checkbox"] {
+    width: 20px;
+    transform: scale(1.1);
+    margin-top: 5px;
+}
+
+/* Akcent przy focus */
+.SimpleLoyalty_Reward_Settings_Part input:focus,
+.SimpleLoyalty_Reward_Settings_Part select:focus {
+    border-color: #a278d6;
+    box-shadow: 0 0 0 1px #a278d6;
+    outline: none;
+}
+
+/* Responsive fallback na mobile */
+@media screen and (max-width: 768px) {
+    .SimpleLoyalty_Reward_Settings {
+        grid-template-columns: 1fr;
+    }
+}

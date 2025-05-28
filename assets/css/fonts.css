@@ -1,0 +1,24 @@
+/* === TYPOGRAFIA SIMPLELOYALTY === */
+
+/* Duże nagłówki (np. tytuł sekcji, H1) */
+.simpleloyalty-heading-xl {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+}
+
+/* Średnie nagłówki (np. podsekcje, H2/H3) */
+.simpleloyalty-heading-md {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Zwykły tekst (np. opisy, etykiety, instrukcje) */
+.simpleloyalty-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
